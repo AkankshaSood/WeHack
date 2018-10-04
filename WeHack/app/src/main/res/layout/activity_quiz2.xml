@@ -5,9 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 <<<<<<< HEAD
+<<<<<<< HEAD
     tools:context="com.example.hp.wehack.Quiz2Activity">
 
 </android.support.constraint.ConstraintLayout>
+=======
+    tools:context=".Quiz2Activity">
+
+</android.support.constraint.ConstraintLayout>
+>>>>>>> c3da69688ee1a779b8e1db88d7ff1275efb1edf3
 =======
     tools:context=".Quiz2Activity">
 

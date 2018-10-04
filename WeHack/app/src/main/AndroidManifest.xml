@@ -26,9 +26,15 @@
         <activity android:name=".SignupActivity" />
         <activity android:name=".MainActivity" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <activity android:name=".QuizActivity" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".Quiz2Activity"></activity>
+=======
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".Quiz2Activity" />
+        <activity android:name=".Extra"></activity>
+>>>>>>> c3da69688ee1a779b8e1db88d7ff1275efb1edf3
 =======
         <activity android:name=".Main2Activity" />
         <activity android:name=".Quiz2Activity" />

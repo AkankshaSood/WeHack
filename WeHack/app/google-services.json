@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1013011299621",
+    "firebase_url": "https://wehack-99c23.firebaseio.com",
+    "project_id": "wehack-99c23",
+    "storage_bucket": "wehack-99c23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013011299621:android:2437c664614fd0f4",
+        "android_client_info": {
+          "package_name": "com.example.hp.wehack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013011299621-o7l6gqpl5p6drmisf186ndjajt52u2mc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hp.wehack",
+            "certificate_hash": "13bc36510cc06f14f821b2c3d0b606e1933000a7"
+          }
+        },
+        {
+          "client_id": "1013011299621-097vhj7egahtm6sura3ndrp62us3dsti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWaHv_aWh3yaezyG-r367D9B3B12rfO-4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013011299621-097vhj7egahtm6sura3ndrp62us3dsti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

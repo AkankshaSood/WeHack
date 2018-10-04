@@ -25,7 +25,9 @@
         <activity android:name=".Dashboard" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".QuizActivity" />
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".Quiz2Activity"></activity>
     </application>
 
 </manifest>

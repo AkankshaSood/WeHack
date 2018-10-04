@@ -25,6 +25,7 @@ public class SignupActivity extends AppCompatActivity {
     private String email, password, name, languauge;
     private FirebaseAuth auth;
     private ProgressBar progressBar;
+    DatabaseReference mDatabaseReference;
     CardView cardView;
     private TextView LogIn;
 
@@ -35,6 +36,7 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         auth = FirebaseAuth.getInstance();
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
         cardView = (CardView) findViewById(R.id.cardView2);
         inputEmail = (EditText) findViewById(R.id.email);
@@ -92,9 +94,10 @@ public class SignupActivity extends AppCompatActivity {
                                             Toast.LENGTH_SHORT).show();
                                 } else {
                                     String user_id = auth.getCurrentUser().getUid();
-                                    User user = new User(user_id,name2.getText().toString(), language2.getText().toString(), inputEmail.getText().toString(),inputPassword.getText().toString());
-                                    DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("User").child(user_id);
-                                    current_user_db.setValue(user);
+                                    //User user = new User(user_id,name2.getText().toString(), language2.getText().toString(), inputEmail.getText().toString(),inputPassword.getText().toString());
+                                    //DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child(child(mDatabaseReference.child("uploads").push().getKey()).setValue(upload);
+                                    //mDatabaseReference.child(mDatabaseReference.child(user_id).push().getKey()).setValue(user);
+                                    //current_user_db.setValue(user);
                                     startActivity(new Intent(SignupActivity.this, Dashboard.class));
                                     finish();
                                 }

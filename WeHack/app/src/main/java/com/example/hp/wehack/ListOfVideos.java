@@ -1,5 +1,6 @@
 package com.example.hp.wehack;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Rect;
 import android.media.MediaPlayer;
@@ -40,6 +41,7 @@ public class ListOfVideos extends AppCompatActivity {
     private RecyclerView recyclerView;
     private Adapter adapter;
     private List<Video> list;
+    ImageView im;
     TextView name,views,likes,duration,channel,date;
     public static final String TAG = "ll";
 
@@ -48,11 +50,18 @@ public class ListOfVideos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_of_videos);
+        im = (ImageView)findViewById(R.id.backdrop);
 
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
 
             initCollapsingToolbar();
+        Intent intent = getIntent();
+
+        String lan = intent.getStringExtra("lan");
+        String s = intent.getStringExtra("stream");
+
+
 
             recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
             name  =(TextView)findViewById(R.id.name) ;
@@ -71,7 +80,45 @@ public class ListOfVideos extends AppCompatActivity {
             recyclerView.setItemAnimator(new DefaultItemAnimator());
             recyclerView.setAdapter(adapter);
 
-            prepareAlbums();
+        if(s.equals("Cooking"))
+        {
+            im.setImageResource(R.drawable.cooking2);
+            if(lan.equalsIgnoreCase("marathi"))
+            {
+                prepareCookingMarathi();
+            }
+            if(lan.equalsIgnoreCase("bengali"))
+            {
+                prepareCookingBengali();
+            }
+            if(lan.equalsIgnoreCase("kannad"))
+            {
+                prepareCookingKannada();
+            }
+            if(lan.equalsIgnoreCase("punjabi"))
+            {
+                prepareCookingPunjabi();
+            }
+        }
+        else{
+            im.setImageResource(R.drawable.nav);
+            if(lan.equalsIgnoreCase("marathi"))
+            {
+                prepareComputerBasicsMarathi();
+            }
+            if(lan.equalsIgnoreCase("bengali"))
+            {
+                prepareComputerBasicsBengali();
+            }
+            if(lan.equalsIgnoreCase("kannad"))
+            {
+                prepareComputerBasicsKannada();
+            }
+            if(lan.equalsIgnoreCase("punjabi"))
+            {
+                prepareCookingPunjabi();
+            }
+        }
 
 //        try {
 //            Glide.with(this).load(R.drawable.music).into((ImageView) findViewById(R.id.backdrop));

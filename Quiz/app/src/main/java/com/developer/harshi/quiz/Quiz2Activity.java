@@ -7,9 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class QuizActivity extends AppCompatActivity {
+public class Quiz2Activity extends AppCompatActivity {
 
-    private QuestionLibrary mQuestionLibrary = new QuestionLibrary();
+    private QuestionLibrary2 mQuestionLibrary2 = new QuestionLibrary2();
 
     private TextView mQuestionView;
     private TextView mScoreView;
@@ -35,12 +35,13 @@ public class QuizActivity extends AppCompatActivity {
         mchoice3 = findViewById(R.id.b1q3);
 
         if(mQuestionNumber==10){
-            Intent i = new Intent (QuizActivity.this,Extra.class);
+            Intent i = new Intent (Quiz2Activity.this,Extra.class);
             i.putExtra("score",score);
             startActivity(i);
         }
         else
-            updateQuestion();
+        updateQuestion();
+
         mchoice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,12 +72,12 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void updateQuestion(){
-        mQuestionView.setText(mQuestionLibrary.getQuestions(mQuestionNumber));
-        mchoice1.setText(mQuestionLibrary.getchoice1(mQuestionNumber));
-        mchoice2.setText(mQuestionLibrary.getchoice2(mQuestionNumber));
-        mchoice3.setText(mQuestionLibrary.getchoice3(mQuestionNumber));
+        mQuestionView.setText(mQuestionLibrary2.getQuestions(mQuestionNumber));
+        mchoice1.setText(mQuestionLibrary2.getchoice1(mQuestionNumber));
+        mchoice2.setText(mQuestionLibrary2.getchoice2(mQuestionNumber));
+        mchoice3.setText(mQuestionLibrary2.getchoice3(mQuestionNumber));
 
-        mAnswer = mQuestionLibrary.getCorrectAnswers(mQuestionNumber);
+        mAnswer = mQuestionLibrary2.getCorrectAnswers();
         mQuestionNumber++;
     }
 

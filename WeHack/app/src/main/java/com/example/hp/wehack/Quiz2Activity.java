@@ -1,5 +1,21 @@
 package com.example.hp.wehack;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class Quiz2Activity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_quiz2);
+    }
+}
+=======
+=======
+>>>>>>> c3da69688ee1a779b8e1db88d7ff1275efb1edf3
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -85,4 +101,9 @@ public class Quiz2Activity extends AppCompatActivity {
     private void updatescore(int score) {
         mScoreView.setText(""+score);
     }
+<<<<<<< HEAD
 }
+>>>>>>> c3da69688ee1a779b8e1db88d7ff1275efb1edf3
+=======
+}
+>>>>>>> c3da69688ee1a779b8e1db88d7ff1275efb1edf3

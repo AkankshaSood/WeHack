@@ -1,7 +1,10 @@
 package com.example.hp.wehack;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -17,6 +20,15 @@ public class YouTubeActivity extends YouTubeBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_you_tube);
+
+        TextView mentor = findViewById(R.id.mentor);
+        mentor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(YouTubeActivity.this,ChatActivity.class);
+                startActivity(i);
+            }
+        });
 
         final String id = getIntent().getStringExtra("id");
         youTubePlayer = (YouTubePlayerView)findViewById(R.id.youtubeplayer);
